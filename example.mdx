@@ -1,0 +1,80 @@
+---
+title: "Example Post Guide"
+date: "2024-02-02"
+description: "A comprehensive guide to writing posts with available MDX tags and formatting options."
+tags: ["guide", "mdx", "example"]
+series: "Documentation"
+seriesOrder: 1
+ogImage: "/og-image.png"
+---
+
+# Heading 1
+## Heading 2
+### Heading 3
+#### Heading 4
+
+This is a paragraph with **bold text**, *italic text*, and `inline code`.
+
+## Lists
+
+### Unordered List
+- Item 1
+- Item 2
+  - Sub-item A
+  - Sub-item B
+
+### Ordered List
+1. First item
+2. Second item
+3. Third item
+
+## Links and Images
+
+[Link to Google](https://google.com)
+
+![Image Alt Text](https://via.placeholder.com/150)
+
+## Blockquotes
+
+> This is a blockquote.
+> It can span multiple lines.
+
+## Code Blocks
+
+Syntax highlighting is provided by `rehype-pretty-code`.
+
+```typescript
+// Example TypeScript code
+interface User {
+  id: number;
+  name: string;
+}
+
+function getUser(id: number): User {
+  return { id, name: "John Doe" };
+}
+```
+
+```python
+# Example Python code
+def hello_world():
+    print("Hello, World!")
+```
+
+## Frontmatter Configuration
+
+The following frontmatter fields are supported:
+
+| Field | Type | Description |
+|Ref | Ref | Ref|
+| `title` | `string` | The title of the post |
+| `date` | `string` | Publication date (YYYY-MM-DD) |
+| `description` | `string` | Brief summary for SEO and previews |
+| `tags` | `string[]` | Array of tags for categorization |
+| `series` | `string` | (Optional) Name of the series this post belongs to |
+| `seriesOrder` | `number` | (Optional) Order within the series |
+| `ogImage` | `string` | (Optional) Path to Open Graph image |
+
+## Note on Custom Components
+
+Currently, standard Markdown elements are supported. Custom React components are not yet configured in the MDX provider.
